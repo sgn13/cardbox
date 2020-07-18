@@ -316,7 +316,7 @@ nav {
 /* hero */
 header {
   height: 55vh;
-  background: linear-gradient(rgba(5, 99, 41, 0.5), rgba(0, 0, 0, 0.7)),
+  background: linear-gradient(rgba(53, 148, 140, 0.5), rgba(0, 0, 0, 0.7)),
     url(./images/head.jpg) center/cover no-repeat;
 }
 .cardlogo{
