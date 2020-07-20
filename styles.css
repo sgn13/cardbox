@@ -237,7 +237,7 @@ nav {
 .logo {
   height: 50px;
 }
-.links-container {
+.links-container,.social {
   margin-left: 7%;
   height: 0;
   overflow: hidden;
@@ -260,13 +260,17 @@ nav {
 .links a:hover {
   color: var(--clr-grey-1);
 }
+.card{
+  display:flex;
+  flex-wrap: wrap;
+}
 @media screen and (min-width: 800px) {
   nav {
     background: transparent;
   }
-  .nav-center { 
-    width: 90vw;
-    max-width: 2100px;
+  .nav-center {
+    /* width: 90vw; */
+    /* max-width: 2200px; */
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -293,6 +297,8 @@ nav {
   }
   .links-container {
     height: auto !important;
+    display: flex;
+    justify-content: center;
   }
   .links {
     display: flex;
@@ -300,10 +306,11 @@ nav {
   .links a {
     background: transparent;
     color: white;
+    /* font-size: 1.1rem; */
     font-size: 1.1rem;
     text-transform: capitalize;
     letter-spacing: var(--spacing);
-    display: block;
+    /* display: block; */
     transition: var(--transition);
     margin: 0 3rem;
     font-weight: bold;
@@ -315,8 +322,8 @@ nav {
 
 /* hero */
 header {
-  height: 55vh;
-  background: linear-gradient(rgba(5, 99, 41, 0.5), rgba(0, 0, 0, 0.7)),
+  height: 50vh;
+  background: linear-gradient(rgba(53, 148, 140, 0.5), rgba(0, 0, 0, 0.7)),
     url(./images/head.jpg) center/cover no-repeat;
 }
 .cardlogo{
@@ -421,9 +428,12 @@ footer p {
 /* card */
 .card{
   display: flex;
-  margin-left: auto;
-  max-width: 80%;
-  flex-basis: auto;
+  
+  /* max-width: 50%; */
+  /* max-width: 80%; */
+  justify-content: center;
+  /* flex-basis: auto; */
+  /* flex-wrap: nowrap; */
   margin-top: 20px;
   margin-bottom: 20px;
 }
