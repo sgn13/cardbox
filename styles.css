@@ -264,7 +264,7 @@ nav {
   nav {
     background: transparent;
   }
-  .nav-center {
+  .nav-center { 
     width: 90vw;
     max-width: 2100px;
     margin: 0 auto;
