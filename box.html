@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box</title>
+    <!-- font awesome -->
+    <!-- <link
+      rel="stylesheet"
+      href="./fontawesome-free-5.12.0-web/css/all.min.css"
+    /> -->
+    <!-- styles -->
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <link rel="stylesheet" href="box.css">
+</head>
+
+<body>
+    <header id="home">
+        <!-- navbar -->
+        <nav id="nav">
+            <div class="nav-center">
+                <!-- nav header -->
+                <div class="nav-header">
+                    <h3 class="cardlogo">Card<span>Box</span></h3>
+                    <button class="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                <!-- links -->
+                <div class="links-container">
+                    <ul class="links">
+                        <li>
+                            <a href="#" class="scroll-link">home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="scroll-link">Design templates</a>
+                        </li>
+                        <li>
+                            <a href="#" class="scroll-link">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#" class="scroll-link">Help</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="social">
+                    <button> Login</button>
+                    <button>Sign up</button>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="sidebar">
+        <a class="tablinks" id="defaultOpen" onclick="openCity(event, 'templates')" href="#">Templates</a>
+        <a class="tablinks" onclick="openCity(event, 'background')" href="#">Background</a>
+        <a class="tablinks" onclick="openCity(event, 'text')" href="#">Text</a>
+        <a class="tablinks" onclick="openCity(event, 'shapes')" href="#">Shapes</a>
+    </div>
+
+    <div id="templates" class="tabcontent">
+        <h3>Templates</h3>
+        <p>Help me ?</p>
+    </div>
+    <div id="background" class="tabcontent">
+        <h3>Background</h3>
+        <p>Help me ?</p>
+        <div>
+            <select onchange="setBackground()" id="color-selector">
+                <option value="none">None</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="silver">Silver</option>
+                <option value="yellow">yellow</option>
+                <option value="azure">Azure</option>
+                <option value="blueviolet">Blue Violet</option>
+                <option value="seagreen">Seagreen</option>
+                <option value="burlywood">Burlywood</option>
+                <option value="aquamarine">Aquamarine</option>
+
+            </select>
+        </div>
+    </div>
+    <div id="text" class="tabcontent">
+        <h3>Text</h3>
+        <p>Add your text</p>
+    </div>
+
+    <div id="shapes" class="tabcontent">
+        <h3>Shapes</h3>
+        <p>Choose your shapes</p>
+    </div>
+
+    <!-- cava board  -->
+    <!-- ----------------------- -->
+    <!-- ------------------------------ -->
+
+    <div class="canva-board">
+        <div id="canBoard"></div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+    <script>
+        var canvaBackground = document.getElementById('canBoard');
+        function setBackground() {
+            var selectedColor = document.getElementById('color-selector').value;
+
+            console.log(canvaBackground);
+            if (selectedColor != 'none') {
+                canvaBackground.style.backgroundColor = selectedColor;
+                console.log(selectedColor);
+            }
+        }
+    </script>
+</body>
+
+</html>
